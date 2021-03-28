@@ -16,7 +16,7 @@ console.log(context)
             accessToken
           });
           client.getEntries().then(e => {
-              setImgSrc(e.items[0].fields.img.fields.file.url);
+              setImgSrc((e.items[0].fields as any).img.fields.file.url);
           })
      },[])
     return (<div><img src={imgSrc}/></div>)
