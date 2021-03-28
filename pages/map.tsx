@@ -41,7 +41,7 @@ useEffect(() => {
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        (position: Position) => {
+        (position: any) => {
           const pos = {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
