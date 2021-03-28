@@ -33,7 +33,7 @@ useEffect(() => {
         infoWindow = new google.maps.InfoWindow();
 
   const locationButton = document.createElement("button");
-  locationButton.textContent = "Pan to Current Location";
+  locationButton.textContent = "Go to you";
   locationButton.classList.add("custom-map-control-button");
 
   map.controls[google.maps.ControlPosition.LEFT_CENTER].push(locationButton);
@@ -51,7 +51,6 @@ const updatePosition = () => {
       // infoWindow.open(map);
       map.setCenter(pos);
       userMaker.setPosition(pos)})
-      setTimeout(updatePosition, 2000)
 
 }
 updatePosition()
