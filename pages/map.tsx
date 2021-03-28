@@ -25,7 +25,8 @@ useEffect(() => {
         });
 
         const userMaker = new google.maps.Marker({
-          map
+          map,
+          icon: "running-icon.svg"
         })
         userMaker.setPosition({lat, lng})
 
@@ -37,6 +38,23 @@ useEffect(() => {
 
   map.controls[google.maps.ControlPosition.LEFT_CENTER].push(locationButton);
 
+const updatePosition = () => {
+  console.log("update")
+  navigator.geolocation.getCurrentPosition(
+    (position: any) => {
+      const pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      };
+      // infoWindow.setPosition(pos);
+      // infoWindow.setContent("Location found.");
+      // infoWindow.open(map);
+      map.setCenter(pos);
+      userMaker.setPosition(pos)})
+      setTimeout(updatePosition, 2000)
+
+}
+updatePosition()
   locationButton.addEventListener("click", () => {
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
