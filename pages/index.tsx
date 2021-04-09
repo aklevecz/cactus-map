@@ -112,8 +112,8 @@ const Map = () => {
     });
   }, []);
   return (
-    <div>
-      <div id="map" style={{ height: "100vh" }}></div>
+    <div id="container">
+      <div id="map"></div>
       {showPopup && (
         <div className="popup">
           <div className="popup-wrapper">
