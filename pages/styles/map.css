@@ -4,18 +4,34 @@ body {
 }
 
 .custom-map-control-button {
-  width: 100px;
+  width: 60px;
+  left: 30px !important;
+  bottom: 80px !important;
 }
 
 .popup {
   position: absolute;
-  top: 50%;
-  background: lightgray;
+  top: 30%;
   width: 100%;
   padding: 30px;
   box-sizing: border-box;
   font-family: sans-serif;
   font-size: 20px;
+}
+
+.popup-speaker {
+  color: #ff5555;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.popup-wrapper {
+  margin: auto;
+  width: 90%;
+  background: #99bcca;
+  padding: 20px;
+  color: white;
+  border-radius: 20px;
 }
 
 button {

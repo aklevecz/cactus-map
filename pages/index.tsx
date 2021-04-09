@@ -116,12 +116,17 @@ const Map = () => {
       <div id="map" style={{ height: "100vh" }}></div>
       {showPopup && (
         <div className="popup">
-          <div>
-            there is a raptor ariel hid for you. it is behind my good friend
-            gerald. use this map to find it. it is buried in between 4 rocks.
-            your hands will do.
+          <div className="popup-wrapper">
+            <div className="popup-speaker">
+              <i>El Diablog says...</i>
+            </div>
+            <div>
+              there is a raptor ariel hid for you. it is behind my good friend
+              gerald. use this map to find it. it is buried in between 4 rocks.
+              your hands will do.
+            </div>
+            <button onClick={() => setShowPopup(false)}>OK</button>
           </div>
-          <button onClick={() => setShowPopup(false)}>OK</button>
         </div>
       )}
     </div>
