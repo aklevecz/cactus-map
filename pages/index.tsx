@@ -99,7 +99,8 @@ const Map = () => {
             (e) => {
               console.log(e);
               // handleLocationError(true, infoWindow, map.getCenter()!);
-            }
+            },
+            { maximumAge: 10000, timeout: 5000, enableHighAccuracy: true }
           );
         } else {
           alert("no nav");
