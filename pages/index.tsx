@@ -68,7 +68,7 @@ const Map = () => {
 
       const updatePosition = () => {
         console.log("update");
-        navigator.geolocation.getCurrentPosition((position: any) => {
+        navigator.geolocation.watchPosition((position: any) => {
           const pos = {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
@@ -90,6 +90,7 @@ const Map = () => {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude,
               };
+              console.log(pos);
               // infoWindow.setPosition(pos);
               // infoWindow.setContent("Location found.");
               // infoWindow.open(map);
